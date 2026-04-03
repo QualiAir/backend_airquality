@@ -1,10 +1,4 @@
-import firebase_admin
-
-from firebase_admin import credentials, messaging
-
-# Initialize Firebase Admin SDK
-cred = credentials.Certificate("./qualiair_fcm_key.json")
-firebase_admin.initialize_app(cred)
+from firebase_admin import messaging
 
 def send_notification(token: str, title: str, body: str):
     # Create a message to send to the device
