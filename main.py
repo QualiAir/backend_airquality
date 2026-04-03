@@ -7,7 +7,7 @@ load_dotenv()
 
 # Initialize Firebase Admin SDK
 #cred = credentials.Certificate("./qualiair_fcm_key.json") #for dev only
-cred = credentials.Certificate("./etc/secrets/qualiair_fcm_key.json")
+cred = credentials.Certificate("/etc/secrets/qualiair_fcm_key.json")
 firebase_admin.initialize_app(cred)
 
 from fastapi import FastAPI
